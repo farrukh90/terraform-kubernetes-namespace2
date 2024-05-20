@@ -2,7 +2,15 @@
 
 ### Please copy paste below code 
 ```
-module namespace { 
-    source = "farrukh90/namespace/kubernetes"
+module "testns" {
+  source = "farrukh90/namespace/kubernetes"
+  name   = "testns"
+  annotations = {
+    new = "application"
+  }
+  labels = {
+    createdby = "farrukh90"
+  }
 }
+
 ```
